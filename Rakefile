@@ -21,7 +21,7 @@ rescue LoadError
   # Don't genera, requirements: requirementste Rspec tasks if we don't have it installed
 end
 
-task :phase1 do
+task :phaseI do
   toy_factory_spec(:phase1)
 
   sucess = Rake::Task['toy_factory_phase1'].invoke
@@ -29,7 +29,7 @@ task :phase1 do
   exec( 'cat acceptance/assets/images/success' )
 end
 
-task :phase2 do
+task :phaseII do
   toy_factory_spec(:phase2)
 
   sucess = Rake::Task['toy_factory_phase2'].invoke
@@ -37,7 +37,7 @@ task :phase2 do
   exec( 'cat acceptance/assets/images/success' )
 end
 
-task :phase3 do
+task :phaseIII do
   toy_factory_spec(:phase3)
 
   sucess = Rake::Task['toy_factory_phase3'].invoke
@@ -45,7 +45,7 @@ task :phase3 do
   exec( 'cat acceptance/assets/images/success' )
 end
 
-task :phase4 do
+task :phaseIV do
   toy_factory_spec(:phase4)
 
   sucess = Rake::Task['toy_factory_phase4'].invoke
