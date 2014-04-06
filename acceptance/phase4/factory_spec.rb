@@ -44,9 +44,9 @@ describe ToyFactory do
       end
 
       it 'calls the correct factory for the specific toy' do
-        described_class.const_get('Factory').build(dealer_order)
-
         expect(described_class.const_get("#{toy}_factory".camelize)).to receive(:build)
+        
+        described_class.const_get('Factory').build(dealer_order)
       end
     end
 
