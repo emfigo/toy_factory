@@ -42,6 +42,12 @@ describe ToyFactory do
       it 'returns the toy specified by the customer' do
         expect(factory.build(dealer_order)).to eq(Kernel.const_get(toy.capitalize.camelize))
       end
+
+      it 'calls the correct factory for the specific toy' do
+        described_class.const_get('Factory').build(dealer_order)
+
+        expect(described_class.const_get("#{toy}_factory".camelize)).to receive(:build)
+      end
     end
 
     %w[car doll robot puzzle waterproof_toy].each do |toy|
