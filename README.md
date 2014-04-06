@@ -26,7 +26,7 @@ IMPORTANT: The factory should have a class method called build that receives a s
 
  #...
 ```
-For now only toy that we produce is called 'toy'
+For now the only toy that we produce is called 'toy'
 
 ##Phase II
 
