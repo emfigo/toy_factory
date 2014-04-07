@@ -6,7 +6,7 @@ module ToyFactory
     end
 
     def make_order
-      order
+      @order
     end
   end
 end
