@@ -6,8 +6,19 @@ module ToyFactory
     end
 
     def make_order
-      if @order == 'toy'
+      order = @order
+      if order == 'toy'
         'toy'
+      elsif order == 'car'
+        'car'    
+      elsif order == 'doll'
+        'doll'
+      elsif order == 'robot'
+        'robot'
+      elsif order == 'puzzle'
+        'puzzle'
+      elsif order == 'waterproof_toy'
+        'waterproof_toy'
       end
     end
 
